@@ -1,7 +1,7 @@
 # LDA
 
 # Importing the dataset
-dataset = read.csv('Wine.csv')
+dataset = read.csv('/media/karel/Trabajo/karel/decsai/2019-2020/SIGE/sige-2019-2020/Prácticas/01 Selección de variables/LDA/Wine.csv')
 
 # Splitting the dataset into the Training set and Test set
 # install.packages('caTools')
@@ -38,7 +38,6 @@ y_pred = predict(classifier, newdata = test_set[-3])
 cm = table(test_set[, 3], y_pred)
 
 # Visualising the Training set results
-library(ElemStatLearn)
 set = training_set
 X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
 X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
@@ -54,7 +53,6 @@ points(grid_set, pch = '.', col = ifelse(y_grid == 2, 'deepskyblue', ifelse(y_gr
 points(set, pch = 21, bg = ifelse(set[, 3] == 2, 'blue3', ifelse(set[, 3] == 1, 'green4', 'red3')))
 
 # Visualising the Test set results
-library(ElemStatLearn)
 set = test_set
 X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
 X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
