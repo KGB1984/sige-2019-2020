@@ -19,7 +19,7 @@ test_set[-14] = scale(test_set[-14])
 library(MASS)
 lda = lda(formula = Customer_Segment ~ ., data = training_set)
 training_set = as.data.frame(predict(lda, training_set))
-training_set = training_set[c(5, 6, 1)]
+        training_set = training_set[c(5, 6, 1)]
 test_set = as.data.frame(predict(lda, test_set))
 test_set = test_set[c(5, 6, 1)]
 
